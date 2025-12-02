@@ -1,0 +1,6 @@
+{
+    "scope": "x_12167_analyzer",
+    "scopeId": "6a542251936936103b65f5532bba1006",
+    "name": "Document Analyzer",
+    "tsconfigPath": "./src/server/tsconfig.json"
+}

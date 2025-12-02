@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ui_page action="INSERT_OR_UPDATE">
+    <sys_id>0daf9a08594143d28b6569e6fb1f7e86</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ui_page_0daf9a08594143d28b6569e6fb1f7e86</sys_update_name>
+    <category>general</category>
+    <client_script/>
+    <description>System Properties configuration page for Photo Analysis application</description>
+    <direct>true</direct>
+    <endpoint>x_12167_analyzer_photo_properties.do</endpoint>
+    <html><![CDATA[
+<!-- @fluent-import-html WARNING: This file was imported from the output of a static build. Modifications of any kind are likely to result in unintended behavior. In most cases, you should edit the source file of the HTML imported below. If you are absolutely certain you want to take control of this HTML, you can remove this comment to prevent the SDK from regenerating it. However, you will then be responsible for the management of this HTML in your Fluent file. -->
+<html>
+  <head>
+    <title>Photo Analysis - System Properties</title>
+    <script src="/uxasset/externals/x_12167_analyzer/properties.jsdbx?uxpcb=$[UxFrameworkScriptables.getFlushTimestamp()]" type="module"></script>
+    <style>body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
+        .property { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .property label { font-weight: bold; display: block; margin-bottom: 5px; }
+        .property input, .property select { width: 300px; padding: 5px; }
+        .description { font-size: 12px; color: #666; margin-top: 5px; }
+        button { background: #007bff; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Photo Analysis System Properties</h1>
+        <p>Configure settings for the photo analysis and fraud detection system</p>
+      </div>
+      <div class="properties">
+        <div class="property">
+          <label>Maximum File Size (MB)</label>
+          <input type="number" value="50" min="1" max="100">
+            <div class="description">Maximum file size in MB for photo analysis processing</div>
+          </input>
+        </div>
+        <div class="property">
+          <label>Auto Analysis Enabled</label>
+          <select>
+            <option value="true" selected="">True</option>
+            <option value="false">False</option>
+          </select>
+          <div class="description">Enable automatic photo analysis when attachments are added to HR cases</div>
+        </div>
+        <div class="property">
+          <label>Confidence Threshold</label>
+          <input type="number" value="75" min="0" max="100">
+            <div class="description">Minimum confidence score (0-100) required for high-confidence fraud detection</div>
+          </input>
+        </div>
+        <div class="property">
+          <label>Supported Formats</label>
+          <input type="text" value="jpg,jpeg,png,gif,bmp,tiff,webp,pdf">
+            <div class="description">Comma-separated list of supported file formats for analysis</div>
+          </input>
+        </div>
+        <div class="property">
+          <label>Analysis Timeout (Seconds)</label>
+          <input type="number" value="300" min="60" max="600">
+            <div class="description">Maximum time in seconds allowed for photo analysis processing</div>
+          </input>
+        </div>
+        <div class="property">
+          <label>PDF Processing Enabled</label>
+          <select>
+            <option value="true" selected="">True</option>
+            <option value="false">False</option>
+          </select>
+          <div class="description">Enable analysis of embedded images within PDF files</div>
+        </div>
+      </div>
+      <br>
+        <button id="saveButton">Save All Properties</button>
+      </br>
+    </div>
+  </body>
+</html>]]></html>
+    <name>photo_properties</name>
+    <processing_script/>
+  </sys_ui_page>
+</record_update>

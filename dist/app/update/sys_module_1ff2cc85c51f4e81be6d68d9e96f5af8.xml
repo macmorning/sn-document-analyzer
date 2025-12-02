@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_module action="INSERT_OR_UPDATE">
+    <sys_id>1ff2cc85c51f4e81be6d68d9e96f5af8</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_module_1ff2cc85c51f4e81be6d68d9e96f5af8</sys_update_name>
+    <content><![CDATA[{
+  "name": "x-12167-document-analyzer",
+  "version": "1.0.0",
+  "description": "Analyzes documents for possible frauds",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/sdk": "4.1.0",
+    "@servicenow/glide": "26.0.1",
+    "eslint": "8.50.0",
+    "@servicenow/eslint-plugin-sdk-app-plugin": "4.1.0"
+  }
+}]]></content>
+    <external_source>false</external_source>
+    <path>x_12167_analyzer/x-12167-document-analyzer/1.0.0/package.json</path>
+    <sys_name>x_12167_analyzer/x-12167-document-analyzer/1.0.0/package.json</sys_name>
+  </sys_module>
+</record_update>

@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <sys_id>42aa4d507f50465fb43caf441353509f</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ui_action_42aa4d507f50465fb43caf441353509f</sys_update_name>
+    <action_name>analyze_attachments</action_name>
+    <active>true</active>
+    <client/>
+    <client_script_v2/>
+    <comments/>
+    <condition>current.test_status != 'completed' &amp;&amp; current.test_status != 'running'</condition>
+    <form_button>true</form_button>
+    <form_button_v2>false</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>false</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style>primary</form_style>
+    <format_for_configurable_workspace>false</format_for_configurable_workspace>
+    <hint>Run photo analysis on all attachments for this test case</hint>
+    <isolate_script>false</isolate_script>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style/>
+    <messages/>
+    <name>Analyze Attachments</name>
+    <onclick/>
+    <order>100</order>
+    <overrides/>
+    <script><![CDATA[
+        // Get the current record
+        var testCaseSysId = current.getValue('sys_id');
+        var testName = current.getValue('test_name');
+        
+        // Update status to running
+        current.setValue('test_status', 'running');
+        current.setValue('test_run_on', new GlideDateTime());
+        current.update();
+        
+        // Find all attachments for this record
+        var attachmentGR = new GlideRecord('sys_attachment');
+        attachmentGR.addQuery('table_name', 'x_12167_analyzer_photo_test_cases');
+        attachmentGR.addQuery('table_sys_id', testCaseSysId);
+        attachmentGR.query();
+        
+        var analysisResults = [];
+        var attachmentCount = 0;
+        var successCount = 0;
+        var errorCount = 0;
+        
+        // Process each attachment
+        while (attachmentGR.next()) {
+            attachmentCount++;
+            var attachmentSysId = attachmentGR.getValue('sys_id');
+            var fileName = attachmentGR.getValue('file_name');
+            
+            try {
+                gs.info('Analyzing attachment: ' + fileName + ' (ID: ' + attachmentSysId + ')');
+                
+                // Create and use the photo analysis engine
+                var engine = new global.PhotoAnalysisEngine();
+                var result = engine.analyzePhoto(attachmentSysId);
+                
+                if (result && result.success) {
+                    successCount++;
+                    var riskLevel = result.results ? result.results.riskLevel : 'analyzed';
+                    analysisResults.push('✓ ' + fileName + ' - Risk: ' + riskLevel);
+                } else {
+                    errorCount++;
+                    var errorMsg = result && result.error ? result.error : 'Analysis failed';
+                    analysisResults.push('✗ ' + fileName + ' - ' + errorMsg);
+                }
+            } catch (error) {
+                errorCount++;
+                analysisResults.push('✗ ' + fileName + ' - Error: ' + error.message);
+                gs.error('Error analyzing attachment ' + fileName + ': ' + error.message);
+            }
+        }
+        
+        // Update test case with results
+        var testGR = new GlideRecord('x_12167_analyzer_photo_test_cases');
+        if (testGR.get(testCaseSysId)) {
+            testGR.setValue('attachments_processed', attachmentCount);
+            testGR.setValue('analysis_completed', attachmentCount > 0 && errorCount < attachmentCount);
+            
+            if (attachmentCount == 0) {
+                testGR.setValue('test_status', 'failed');
+                testGR.setValue('analysis_findings', 'No attachments found to analyze');
+                testGR.setValue('test_result', 'fail');
+            } else if (errorCount > 0 && successCount == 0) {
+                testGR.setValue('test_status', 'failed');
+                testGR.setValue('test_result', 'fail');
+            } else {
+                testGR.setValue('test_status', 'completed');
+                testGR.setValue('test_result', successCount > 0 ? 'pass' : 'fail');
+            }
+            
+            testGR.setValue('analysis_findings', analysisResults.join('\n'));
+            testGR.update();
+        }
+        
+        // Show results to user
+        if (attachmentCount == 0) {
+            gs.addErrorMessage('No attachments found. Please attach photos or PDFs to test.');
+        } else {
+            gs.addInfoMessage('Analysis complete! Processed: ' + attachmentCount + ', Success: ' + successCount + ', Errors: ' + errorCount);
+        }
+        
+        // Refresh the form to show updated results
+        action.setRedirectURL(current);
+    ]]></script>
+    <show_insert>false</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <table>x_12167_analyzer_photo_test_cases</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible/>
+  </sys_ui_action>
+</record_update>

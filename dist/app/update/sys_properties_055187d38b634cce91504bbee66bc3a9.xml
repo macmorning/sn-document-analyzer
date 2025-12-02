@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_properties action="INSERT_OR_UPDATE">
+    <sys_id>055187d38b634cce91504bbee66bc3a9</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_properties_055187d38b634cce91504bbee66bc3a9</sys_update_name>
+    <choices/>
+    <description>Maximum time in seconds allowed for photo analysis processing</description>
+    <ignore_cache>false</ignore_cache>
+    <is_private>false</is_private>
+    <name>x_12167_analyzer.photo_analysis.timeout_seconds</name>
+    <read_roles/>
+    <suffix>photo_analysis.timeout_seconds</suffix>
+    <type>integer</type>
+    <value>300</value>
+    <write_roles/>
+  </sys_properties>
+</record_update>

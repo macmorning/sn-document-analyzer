@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ui_action_role action="INSERT_OR_UPDATE">
+    <sys_id>2a6c481ba5b642c8849e0e8cd1544fbb</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ui_action_role_2a6c481ba5b642c8849e0e8cd1544fbb</sys_update_name>
+    <sys_ui_action>42aa4d507f50465fb43caf441353509f</sys_ui_action>
+    <sys_user_role name="x_12167_analyzer.photo_investigator">4b6c7fb83bde43e6a70599afca561513</sys_user_role>
+  </sys_ui_action_role>
+</record_update>

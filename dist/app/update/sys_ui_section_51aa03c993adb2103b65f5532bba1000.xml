@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ui_section action="INSERT_OR_UPDATE">
+    <sys_id>51aa03c993adb2103b65f5532bba1000</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ui_section_51aa03c993adb2103b65f5532bba1000</sys_update_name>
+    <header>false</header>
+    <name>x_12167_analyzer_photo_test_cases</name>
+    <sys_domain>global</sys_domain>
+    <sys_domain_path>/</sys_domain_path>
+    <title>true</title>
+    <view>Default view</view>
+  </sys_ui_section>
+</record_update>

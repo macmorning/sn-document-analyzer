@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>81bd37d84d0e458e810b70509d4d6a16</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_app_module_81bd37d84d0e458e810b70509d4d6a16</sys_update_name>
+    <active>true</active>
+    <application>974286216ab445f8b59ec0ef9eb80150</application>
+    <hint>Configure photo analysis system settings</hint>
+    <link_type>DIRECT</link_type>
+    <order>220</order>
+    <query>x_12167_analyzer_photo_properties.do</query>
+    <title>System Properties</title>
+  </sys_app_module>
+</record_update>

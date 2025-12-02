@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_properties action="INSERT_OR_UPDATE">
+    <sys_id>99c8bc2d10524b72a6452d0c87277ea3</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_properties_99c8bc2d10524b72a6452d0c87277ea3</sys_update_name>
+    <choices>error,warn,info,debug</choices>
+    <description>Logging level for photo analysis debugging</description>
+    <ignore_cache>false</ignore_cache>
+    <is_private>false</is_private>
+    <name>x_12167_analyzer.photo_analysis.debug_level</name>
+    <read_roles/>
+    <suffix>photo_analysis.debug_level</suffix>
+    <type>choicelist</type>
+    <value>info</value>
+    <write_roles/>
+  </sys_properties>
+</record_update>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ui_element action="INSERT_OR_UPDATE">
+    <sys_id>11aa03c993adb2103b65f5532bba102a</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ui_element_11aa03c993adb2103b65f5532bba102a</sys_update_name>
+    <element>test_result</element>
+    <position>8</position>
+    <sys_ui_section>51aa03c993adb2103b65f5532bba1000</sys_ui_section>
+  </sys_ui_element>
+</record_update>

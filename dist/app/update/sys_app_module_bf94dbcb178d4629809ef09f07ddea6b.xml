@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>bf94dbcb178d4629809ef09f07ddea6b</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_app_module_bf94dbcb178d4629809ef09f07ddea6b</sys_update_name>
+    <active>true</active>
+    <application>974286216ab445f8b59ec0ef9eb80150</application>
+    <link_type>SEPARATOR</link_type>
+    <order>200</order>
+    <title>Testing &amp; Configuration</title>
+  </sys_app_module>
+</record_update>

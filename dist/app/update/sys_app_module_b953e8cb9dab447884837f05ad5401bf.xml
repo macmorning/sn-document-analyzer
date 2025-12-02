@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>b953e8cb9dab447884837f05ad5401bf</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_app_module_b953e8cb9dab447884837f05ad5401bf</sys_update_name>
+    <active>true</active>
+    <application>974286216ab445f8b59ec0ef9eb80150</application>
+    <hint>View all photo analysis results from HR cases</hint>
+    <link_type>LIST</link_type>
+    <name>x_12167_analyzer_photo_analysis_results</name>
+    <order>100</order>
+    <title>Analysis Results</title>
+  </sys_app_module>
+</record_update>

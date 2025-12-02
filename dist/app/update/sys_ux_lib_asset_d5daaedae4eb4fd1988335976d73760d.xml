@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_ux_lib_asset action="INSERT_OR_UPDATE">
+    <sys_id>d5daaedae4eb4fd1988335976d73760d</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_ux_lib_asset_d5daaedae4eb4fd1988335976d73760d</sys_update_name>
+    <category>component</category>
+    <checksum>4f92930654dc9f01006367756570d225</checksum>
+    <content><![CDATA[/*__ESM_BODY_START__*/console.log("Photo Analysis Properties page loaded"),document.addEventListener("DOMContentLoaded",function(){let saveButton=document.getElementById("saveButton");saveButton&&saveButton.addEventListener("click",function(){alert("Properties configuration saved!\n\n(This is a demo interface - implement actual ServiceNow property save functionality via Table API)")}),console.log("Photo Analysis Properties page initialized")});
+//# sourceMappingURL=properties.js.map.jsdbx
+]]></content>
+    <engine>21</engine>
+    <es_module>true</es_module>
+    <is_attachment>false</is_attachment>
+    <mime_type>application/javascript</mime_type>
+    <name>x_12167_analyzer/properties</name>
+    <sys_package>6a542251936936103b65f5532bba1006</sys_package>
+  </sys_ux_lib_asset>
+</record_update>

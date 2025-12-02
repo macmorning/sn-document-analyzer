@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_properties action="INSERT_OR_UPDATE">
+    <sys_id>e3103c9740754148ab7829482163b235</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_properties_e3103c9740754148ab7829482163b235</sys_update_name>
+    <choices/>
+    <description>Maximum file size in MB for photo analysis processing</description>
+    <ignore_cache>false</ignore_cache>
+    <is_private>false</is_private>
+    <name>x_12167_analyzer.photo_analysis.max_file_size_mb</name>
+    <read_roles/>
+    <suffix>photo_analysis.max_file_size_mb</suffix>
+    <type>integer</type>
+    <value>50</value>
+    <write_roles/>
+  </sys_properties>
+</record_update>

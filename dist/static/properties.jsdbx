@@ -1,0 +1,2 @@
+/*__ESM_BODY_START__*/console.log("Photo Analysis Properties page loaded"),document.addEventListener("DOMContentLoaded",function(){let saveButton=document.getElementById("saveButton");saveButton&&saveButton.addEventListener("click",function(){alert("Properties configuration saved!\n\n(This is a demo interface - implement actual ServiceNow property save functionality via Table API)")}),console.log("Photo Analysis Properties page initialized")});
+//# sourceMappingURL=properties.js.map.jsdbx

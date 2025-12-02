@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_app_category action="INSERT_OR_UPDATE">
+    <sys_id>a02d1463e56b46c1bb2f4ba29b8f2f5a</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <sys_update_name>sys_app_category_a02d1463e56b46c1bb2f4ba29b8f2f5a</sys_update_name>
+    <name>x_12167_analyzer_photo_analysis</name>
+    <style>border-color: #4CAF50; background-color: #e8f5e8;</style>
+  </sys_app_category>
+</record_update>

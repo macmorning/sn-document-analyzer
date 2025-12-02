@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<record_update>
+  <sys_module action="INSERT_OR_UPDATE">
+    <sys_id>422ae23b91ad4dbeb8afd091b18bf886</sys_id>
+    <sys_scope display_value="x_12167_analyzer">6a542251936936103b65f5532bba1006</sys_scope>
+    <path>x_12167_analyzer/x-12167-document-analyzer/1.0.0/bom.json</path>
+    <external_source>false</external_source>
+    <content><![CDATA[{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:b2eec42a-b5ec-4e76-8d30-609833bdbf9b",
+  "metadata": {
+    "timestamp": "2025-11-30T17:15:44.860Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "4.1.0",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "x-12167-document-analyzer",
+      "version": "1.0.0",
+      "bom-ref": "pkg:servicenow/x-12167-document-analyzer@1.0.0?sys_scope_id=6a542251936936103b65f5532bba1006",
+      "description": "Analyzes documents for possible frauds",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNLICENSED"
+          }
+        }
+      ],
+      "purl": "pkg:servicenow/x-12167-document-analyzer@1.0.0?sys_scope_id=6a542251936936103b65f5532bba1006"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/x-12167-document-analyzer@1.0.0?sys_scope_id=6a542251936936103b65f5532bba1006"
+    }
+  ]
+}]]></content>
+  </sys_module>
+</record_update>
