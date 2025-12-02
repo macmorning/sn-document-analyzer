@@ -1,4 +1,4 @@
-import '@servicenow/sdk/global'
+/*import '@servicenow/sdk/global'
 import { Acl } from '@servicenow/sdk/core'
 import { x_12167_analyzer_photo_analysis_results } from '../tables/photo-analysis-results.now'
 
@@ -45,3 +45,4 @@ export const deleteAcl = Acl({
     script: Now.include('../../server/acl-scripts/photo-admin-delete.js'),
     active: true
 })
+*/
