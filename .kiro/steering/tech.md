@@ -1,5 +1,9 @@
 # Technology Stack
 
+## Development Environment
+
+Development is done in an external IDE with code synchronized to ServiceNow via GitHub. Building, transformation, and testing occur on the ServiceNow instance - not locally.
+
 ## Build System
 
 ServiceNow SDK 4.1.0 with Fluent API for declarative application development.
@@ -12,21 +16,9 @@ ServiceNow SDK 4.1.0 with Fluent API for declarative application development.
 - **TypeScript**: Used for Fluent API definitions (`.now.ts` files)
 - **JavaScript**: Used for server-side business logic
 
-## Common Commands
+## Deployment Workflow
 
-```bash
-# Build the application
-npm run build
-
-# Deploy to ServiceNow instance
-npm run deploy
-
-# Transform Fluent API to ServiceNow records
-npm run transform
-
-# Update type definitions
-npm run types
-```
+Code changes are committed to GitHub and synchronized to the ServiceNow instance where the SDK handles building and transformation. Do not attempt to run build commands locally.
 
 ## Code Organization
 
@@ -39,3 +31,12 @@ npm run types
 - `@servicenow/sdk/core`: Core SDK components (Table, ScriptInclude, UiAction, etc.)
 - `@servicenow/sdk/global`: Global type definitions
 - `@servicenow/glide`: ServiceNow server-side APIs (GlideRecord, GlideDateTime, gs)
+
+## Development Principles
+
+- **Use Native ServiceNow Features**: Leverage built-in ServiceNow functionality whenever possible
+  - Use Property Categories for system properties instead of custom UI pages
+  - Use standard ServiceNow UI components and patterns
+  - Prefer out-of-box features over custom implementations
+- **Follow ServiceNow Best Practices**: Adhere to platform conventions and recommended patterns
+- **Minimize Custom UI**: Only create custom UI when native options are insufficient
